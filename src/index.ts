@@ -10,7 +10,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-blockly-ipylgbst:plugin',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
-    console.log('JupyterLab extension jupyterlab-blockly-ipylgbst is activated!');
+    console.log(
+      'JupyterLab extension jupyterlab-blockly-ipylgbst is activated!'
+    );
   }
 };
 
