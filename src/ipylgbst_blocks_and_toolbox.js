@@ -46,27 +46,31 @@ Blockly.Blocks['ipylgbst_connect_lane'] = {
     this.appendValueInput('NLANES')
       .setCheck('Number')
       .appendField('Connect to MoveHub and run');
-    this.appendDummyInput()
-      .appendField('tasks');
+    this.appendDummyInput().appendField('tasks');
     this.setPreviousStatement(false, null);
     this.setNextStatement(false, null);
     this.setInputsInline(true);
     this.appendStatementInput('DO');
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Connect to the Lego Boost and define a number of tasks to be performed at the same time. You can use the "Run Task" block to create a task. E.g. you can run a task to move forward and another task to change the color of the LED at the same time.');
+    this.setTooltip(
+      'Connect to the Lego Boost and define a number of tasks to be performed at the same time. You can use the "Run Task" block to create a task. E.g. you can run a task to move forward and another task to change the color of the LED at the same time.'
+    );
     this.setHelpUrl('');
   }
 };
 
 Blockly.Blocks['ipylgbst_connect'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Connect to MoveHub and run task concurrently');
+    this.appendDummyInput().appendField(
+      'Connect to MoveHub and run task concurrently'
+    );
     this.setPreviousStatement(false, null);
     this.setNextStatement(false, null);
     this.appendStatementInput('DO');
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Connect to the Lego Boost and run the code. Everything is being performed as one main task.');
+    this.setTooltip(
+      'Connect to the Lego Boost and run the code. Everything is being performed as one main task.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -75,17 +79,20 @@ Blockly.Blocks['ipylgbst_set_led_async'] = {
   init: function () {
     this.appendDummyInput()
       .appendField('Async change LED color to')
-      .appendField(new Blockly.FieldDropdown([
-        ['Red', 'LedColor.red'],
-        ['Green', 'LedColor.green'],
-        ['Blue', 'LedColor.blue'],
-        ['Yellow', 'LedColor.yellow'],
-        ['Cyan', 'LedColor.cyan'],
-        ['Pink', 'LedColor.pink'],
-        ['Purple', 'LedColor.purple'],
-        ['Light Blue', 'LedColor.lightblue'],
-        ['Orange', 'LedColor.orange']
-      ]), 'COLOR');
+      .appendField(
+        new Blockly.FieldDropdown([
+          ['Red', 'LedColor.red'],
+          ['Green', 'LedColor.green'],
+          ['Blue', 'LedColor.blue'],
+          ['Yellow', 'LedColor.yellow'],
+          ['Cyan', 'LedColor.cyan'],
+          ['Pink', 'LedColor.pink'],
+          ['Purple', 'LedColor.purple'],
+          ['Light Blue', 'LedColor.lightblue'],
+          ['Orange', 'LedColor.orange']
+        ]),
+        'COLOR'
+      );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
@@ -99,15 +106,15 @@ Blockly.Blocks['ipylgbst_move_forward_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async move forward with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move forward with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move forward with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -117,15 +124,15 @@ Blockly.Blocks['ipylgbst_move_bacwards_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async move backwards with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move bacwards with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move bacwards with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -135,14 +142,14 @@ Blockly.Blocks['ipylgbst_turn_left_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async turn left with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Turn left with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Turn left with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -152,25 +159,22 @@ Blockly.Blocks['ipylgbst_turn_right_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async turn right with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Turn right with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Turn right with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
 
 Blockly.Blocks['ipylgbst_sleep'] = {
   init: function () {
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('Wait for');
-    this.appendDummyInput()
-      .appendField('seconds');
+    this.appendValueInput('TIME').setCheck('Number').appendField('Wait for');
+    this.appendDummyInput().appendField('seconds');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setInputsInline(true);
@@ -182,8 +186,7 @@ Blockly.Blocks['ipylgbst_sleep'] = {
 
 Blockly.Blocks['ipylgbst_stop_motors_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async stop motors');
+    this.appendDummyInput().appendField('Async stop motors');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
@@ -200,15 +203,15 @@ Blockly.Blocks['ipylgbst_move_both_motors_time_async'] = {
     this.appendValueInput('SPEED_B')
       .setCheck('Number')
       .appendField('and right motor with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move both motors with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move both motors with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -221,15 +224,15 @@ Blockly.Blocks['ipylgbst_move_both_motors_angle_async'] = {
     this.appendValueInput('SPEED_B')
       .setCheck('Number')
       .appendField('and right motor with speed');
-    this.appendValueInput('ANGLE')
-      .setCheck('Number')
-      .appendField('at');
+    this.appendValueInput('ANGLE').setCheck('Number').appendField('at');
     this.appendDummyInput().appendField('degrees angle');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move both motors with a certain speed for a chosen no. of degrees.');
+    this.setTooltip(
+      'Move both motors with a certain speed for a chosen no. of degrees.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -239,15 +242,15 @@ Blockly.Blocks['ipylgbst_move_motor_A_time_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async move left motor with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move left motor with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move left motor with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -257,15 +260,15 @@ Blockly.Blocks['ipylgbst_move_motor_B_time_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async move right motor with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move right motor with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move right motor with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -275,15 +278,15 @@ Blockly.Blocks['ipylgbst_move_motor_A_angle_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async move left motor with speed');
-    this.appendValueInput('ANGLE')
-      .setCheck('Number')
-      .appendField('at');
+    this.appendValueInput('ANGLE').setCheck('Number').appendField('at');
     this.appendDummyInput().appendField('degrees angle');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move left motor with a certain speed for a chosen no. of degrees.');
+    this.setTooltip(
+      'Move left motor with a certain speed for a chosen no. of degrees.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -293,23 +296,22 @@ Blockly.Blocks['ipylgbst_move_motor_B_angle_async'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Async move right motor with speed');
-    this.appendValueInput('ANGLE')
-      .setCheck('Number')
-      .appendField('at');
+    this.appendValueInput('ANGLE').setCheck('Number').appendField('at');
     this.appendDummyInput().appendField('degreees angle');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Move right motor with a certain speed for a chosen no. of degrees.');
+    this.setTooltip(
+      'Move right motor with a certain speed for a chosen no. of degrees.'
+    );
     this.setHelpUrl('');
   }
 };
 
 Blockly.Blocks['ipylgbst_get_color_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async get color');
+    this.appendDummyInput().appendField('Async get color');
     this.setOutput(true, 'String');
     this.setColour(vernie_color_async);
     this.setTooltip('Get the color the sensor is currently seeing.');
@@ -319,8 +321,7 @@ Blockly.Blocks['ipylgbst_get_color_async'] = {
 
 Blockly.Blocks['ipylgbst_get_distance_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async get distance');
+    this.appendDummyInput().appendField('Async get distance');
     this.setOutput(true, 'String');
     this.setColour(vernie_color_async);
     this.setTooltip('Get the distance the sensor is currently seeing.');
@@ -330,8 +331,7 @@ Blockly.Blocks['ipylgbst_get_distance_async'] = {
 
 Blockly.Blocks['ipylgbst_get_pitch_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async get pitch');
+    this.appendDummyInput().appendField('Async get pitch');
     this.setOutput(true, 'String');
     this.setColour(vernie_color_async);
     this.setTooltip('Get the pitch the sensor is currently seeing.');
@@ -341,8 +341,7 @@ Blockly.Blocks['ipylgbst_get_pitch_async'] = {
 
 Blockly.Blocks['ipylgbst_get_roll_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async get roll');
+    this.appendDummyInput().appendField('Async get roll');
     this.setOutput(true, 'String');
     this.setColour(vernie_color_async);
     this.setTooltip('Get the roll the sensor is currently seeing.');
@@ -352,8 +351,7 @@ Blockly.Blocks['ipylgbst_get_roll_async'] = {
 
 Blockly.Blocks['ipylgbst_move_head_left_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async move head to the left');
+    this.appendDummyInput().appendField('Async move head to the left');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(vernie_color_async);
@@ -364,8 +362,7 @@ Blockly.Blocks['ipylgbst_move_head_left_async'] = {
 
 Blockly.Blocks['ipylgbst_move_head_right_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async move head to the right');
+    this.appendDummyInput().appendField('Async move head to the right');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(vernie_color_async);
@@ -376,8 +373,7 @@ Blockly.Blocks['ipylgbst_move_head_right_async'] = {
 
 Blockly.Blocks['ipylgbst_shoot_arrow_async'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Async shoot arrow');
+    this.appendDummyInput().appendField('Async shoot arrow');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(vernie_color_async);
@@ -390,17 +386,20 @@ Blockly.Blocks['ipylgbst_set_led'] = {
   init: function () {
     this.appendDummyInput()
       .appendField('Change LED color to')
-      .appendField(new Blockly.FieldDropdown([
-        ['Red', 'LedColor.red'],
-        ['Green', 'LedColor.green'],
-        ['Blue', 'LedColor.blue'],
-        ['Yellow', 'LedColor.yellow'],
-        ['Cyan', 'LedColor.cyan'],
-        ['Pink', 'LedColor.pink'],
-        ['Purple', 'LedColor.purple'],
-        ['Light Blue', 'LedColor.lightblue'],
-        ['Orange', 'LedColor.orange']
-      ]), 'COLOR');
+      .appendField(
+        new Blockly.FieldDropdown([
+          ['Red', 'LedColor.red'],
+          ['Green', 'LedColor.green'],
+          ['Blue', 'LedColor.blue'],
+          ['Yellow', 'LedColor.yellow'],
+          ['Cyan', 'LedColor.cyan'],
+          ['Pink', 'LedColor.pink'],
+          ['Purple', 'LedColor.purple'],
+          ['Light Blue', 'LedColor.lightblue'],
+          ['Orange', 'LedColor.orange']
+        ]),
+        'COLOR'
+      );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
@@ -414,15 +413,15 @@ Blockly.Blocks['ipylgbst_move_forward'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Move forward with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move forward with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move forward with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -432,15 +431,15 @@ Blockly.Blocks['ipylgbst_move_bacwards'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Move backwards with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move bacwards with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move bacwards with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -450,14 +449,14 @@ Blockly.Blocks['ipylgbst_turn_left'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Turn left with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Turn left with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Turn left with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -467,22 +466,21 @@ Blockly.Blocks['ipylgbst_turn_right'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Turn right with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Turn right with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Turn right with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
 
 Blockly.Blocks['ipylgbst_stop_motors'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Stop motors');
+    this.appendDummyInput().appendField('Stop motors');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
@@ -499,15 +497,15 @@ Blockly.Blocks['ipylgbst_move_both_motors_time'] = {
     this.appendValueInput('SPEED_B')
       .setCheck('Number')
       .appendField('and right motor with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move both motors with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move both motors with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -520,15 +518,15 @@ Blockly.Blocks['ipylgbst_move_both_motors_angle'] = {
     this.appendValueInput('SPEED_B')
       .setCheck('Number')
       .appendField('and right motor with speed');
-    this.appendValueInput('ANGLE')
-      .setCheck('Number')
-      .appendField('at');
+    this.appendValueInput('ANGLE').setCheck('Number').appendField('at');
     this.appendDummyInput().appendField('degrees angle');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move both motors with a certain speed for a chosen no. of degrees.');
+    this.setTooltip(
+      'Move both motors with a certain speed for a chosen no. of degrees.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -538,15 +536,15 @@ Blockly.Blocks['ipylgbst_move_motor_A_time'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Move left motor with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move left motor with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move left motor with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -556,15 +554,15 @@ Blockly.Blocks['ipylgbst_move_motor_B_time'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Move right motor with speed');
-    this.appendValueInput('TIME')
-      .setCheck('Number')
-      .appendField('for');
+    this.appendValueInput('TIME').setCheck('Number').appendField('for');
     this.appendDummyInput().appendField('seconds');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move right motor with a certain speed for a chosen no. of seconds.');
+    this.setTooltip(
+      'Move right motor with a certain speed for a chosen no. of seconds.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -574,15 +572,15 @@ Blockly.Blocks['ipylgbst_move_motor_A_angle'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Move left motor with speed');
-    this.appendValueInput('ANGLE')
-      .setCheck('Number')
-      .appendField('at');
+    this.appendValueInput('ANGLE').setCheck('Number').appendField('at');
     this.appendDummyInput().appendField('degrees angle');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move left motor with a certain speed for a chosen no. of degrees.');
+    this.setTooltip(
+      'Move left motor with a certain speed for a chosen no. of degrees.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -592,23 +590,22 @@ Blockly.Blocks['ipylgbst_move_motor_B_angle'] = {
     this.appendValueInput('SPEED')
       .setCheck('Number')
       .appendField('Move right motor with speed');
-    this.appendValueInput('ANGLE')
-      .setCheck('Number')
-      .appendField('at');
+    this.appendValueInput('ANGLE').setCheck('Number').appendField('at');
     this.appendDummyInput().appendField('degreees angle');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(ipylgbst_color);
-    this.setTooltip('Move right motor with a certain speed for a chosen no. of degrees.');
+    this.setTooltip(
+      'Move right motor with a certain speed for a chosen no. of degrees.'
+    );
     this.setHelpUrl('');
   }
 };
 
 Blockly.Blocks['ipylgbst_get_color'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Get color');
+    this.appendDummyInput().appendField('Get color');
     this.setOutput(true, 'String');
     this.setColour(vernie_color);
     this.setTooltip('Get the color the sensor is currently seeing.');
@@ -618,8 +615,7 @@ Blockly.Blocks['ipylgbst_get_color'] = {
 
 Blockly.Blocks['ipylgbst_get_distance'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Get distance');
+    this.appendDummyInput().appendField('Get distance');
     this.setOutput(true, 'String');
     this.setColour(vernie_color);
     this.setTooltip('Get the distance the sensor is currently seeing.');
@@ -629,8 +625,7 @@ Blockly.Blocks['ipylgbst_get_distance'] = {
 
 Blockly.Blocks['ipylgbst_get_pitch'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Get pitch');
+    this.appendDummyInput().appendField('Get pitch');
     this.setOutput(true, 'String');
     this.setColour(vernie_color);
     this.setTooltip('Get the pitch the sensor is currently seeing.');
@@ -640,8 +635,7 @@ Blockly.Blocks['ipylgbst_get_pitch'] = {
 
 Blockly.Blocks['ipylgbst_get_roll'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Get roll');
+    this.appendDummyInput().appendField('Get roll');
     this.setOutput(true, 'String');
     this.setColour(vernie_color);
     this.setTooltip('Get the roll the sensor is currently seeing.');
@@ -651,8 +645,7 @@ Blockly.Blocks['ipylgbst_get_roll'] = {
 
 Blockly.Blocks['ipylgbst_move_head_left'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Move head to the left');
+    this.appendDummyInput().appendField('Move head to the left');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(vernie_color);
@@ -663,8 +656,7 @@ Blockly.Blocks['ipylgbst_move_head_left'] = {
 
 Blockly.Blocks['ipylgbst_move_head_right'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Move head to the right');
+    this.appendDummyInput().appendField('Move head to the right');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(vernie_color);
@@ -675,8 +667,7 @@ Blockly.Blocks['ipylgbst_move_head_right'] = {
 
 Blockly.Blocks['ipylgbst_shoot_arrow'] = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('Shoot arrow');
+    this.appendDummyInput().appendField('Shoot arrow');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(vernie_color);
@@ -689,14 +680,15 @@ Blockly.Blocks['ipylgbst_coroutine_async'] = {
   init: function () {
     // this.appendValueInput('NAME')
     //   .setCheck('String')
-    this.appendDummyInput()
-      .appendField('Run task concurrently');
+    this.appendDummyInput().appendField('Run task concurrently');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.appendStatementInput('DO');
     this.setColour(ipylgbst_color_async);
-    this.setTooltip('Create a task that will be run in parallel with other tasks. E.g. changing the color of the LED in a task, while the robot is being moved in another task.');
+    this.setTooltip(
+      'Create a task that will be run in parallel with other tasks. E.g. changing the color of the LED in a task, while the robot is being moved in another task.'
+    );
     this.setHelpUrl('');
   }
 };
@@ -708,12 +700,20 @@ var no = 0;
 
 BlocklyPy['ipylgbst_coroutine_async'] = function (block) {
   // var text_name = BlocklyPy.valueToCode(block, 'NAME', BlocklyPy.ORDER_ATOMIC);
-  if (no == n_lanes_global)
-    no = 0;
+  if (no == n_lanes_global) no = 0;
   var text_name = 'task_' + no;
   let branch = BlocklyPy.statementToCode(block, 'DO');
 
-  var code = 'async def ' + text_name + '(lane):\n' + branch + 'boost.run_async_program(' + text_name + ', lane = ' + no + ')\n\n';
+  var code =
+    'async def ' +
+    text_name +
+    '(lane):\n' +
+    branch +
+    'boost.run_async_program(' +
+    text_name +
+    ', lane = ' +
+    no +
+    ')\n\n';
   no++;
   return code;
 };
@@ -727,9 +727,8 @@ BlocklyPy['ipylgbst_connect_lane'] = function (block) {
   let branch = BlocklyPy.statementToCode(block, 'DO');
 
   // var code = 'with boost_connect(' + no_lanes +') as boost:\n' + branch;
-  var code = 
-  'with boost_connect(' + n_lanes +') as boost:\n' + branch + '\n';
-   // 'boost = LegoBoostWidget()\nboost.connect()\n\nasync def main(lane):\n' + branch + '\nboost.run(main)\n';
+  var code = 'with boost_connect(' + n_lanes + ') as boost:\n' + branch + '\n';
+  // 'boost = LegoBoostWidget()\nboost.connect()\n\nasync def main(lane):\n' + branch + '\nboost.run(main)\n';
   return code;
 };
 
@@ -752,9 +751,11 @@ BlocklyPy['ipylgbst_connect'] = function (block) {
   let branch = BlocklyPy.statementToCode(block, 'DO');
 
   // var code = 'with boost_connect(' + no_lanes +') as boost:\n' + branch;
-  var code = 
-  'with boost_connect(1) as boost:\n    async def main(lane):\n' + branch + '\n    boost.run_async_program(main)\n';
-   // 'boost = LegoBoostWidget()\nboost.connect()\n\nasync def main(lane):\n' + branch + '\nboost.run(main)\n';
+  var code =
+    'with boost_connect(1) as boost:\n    async def main(lane):\n' +
+    branch +
+    '\n    boost.run_async_program(main)\n';
+  // 'boost = LegoBoostWidget()\nboost.connect()\n\nasync def main(lane):\n' + branch + '\nboost.run(main)\n';
   return code;
 };
 
@@ -781,15 +782,37 @@ BlocklyPy['ipylgbst_set_led_async'] = function (block) {
 
 BlocklyPy['ipylgbst_move_forward_async'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_multi_async(seconds = ' + value_time + ', power_a = ' + value_speed + ', power_b =' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_time_multi_async(seconds = ' +
+    value_time +
+    ', power_a = ' +
+    value_speed +
+    ', power_b =' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_bacwards_async'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_multi_async( seconds = ' + value_time + ', power_a = -' + value_speed + ', power_b = -' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_time_multi_async( seconds = ' +
+    value_time +
+    ', power_a = -' +
+    value_speed +
+    ', power_b = -' +
+    value_speed +
+    ')\n';
   return code;
 };
 
@@ -801,76 +824,187 @@ BlocklyPy['ipylgbst_sleep'] = function (block) {
 
 BlocklyPy['ipylgbst_turn_left_async'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_multi_async( seconds = ' + value_time + ', power_a = -' + value_speed + ', power_b = ' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_time_multi_async( seconds = ' +
+    value_time +
+    ', power_a = -' +
+    value_speed +
+    ', power_b = ' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_turn_right_async'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_multi_async( seconds = ' + value_time + ', power_a = ' + value_speed + ', power_b = -' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_time_multi_async( seconds = ' +
+    value_time +
+    ', power_a = ' +
+    value_speed +
+    ', power_b = -' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_stop_motors_async'] = function (block) {
-  var code = '        await lane.motor_time_multi_async( seconds = 0, power_a = 0, power_b = 0)\n';
+  var code =
+    '        await lane.motor_time_multi_async( seconds = 0, power_a = 0, power_b = 0)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_both_motors_time_async'] = function (block) {
-  var value_speed_a = BlocklyPy.valueToCode(block, 'SPEED_A', BlocklyPy.ORDER_ATOMIC);
-  var value_speed_b = BlocklyPy.valueToCode(block, 'SPEED_B', BlocklyPy.ORDER_ATOMIC);
+  var value_speed_a = BlocklyPy.valueToCode(
+    block,
+    'SPEED_A',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_speed_b = BlocklyPy.valueToCode(
+    block,
+    'SPEED_B',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_multi_async( seconds = ' + value_time + ', power_a = ' + value_speed_a + ', power_b = ' + value_speed_b + ')\n';
+  var code =
+    '        await lane.motor_time_multi_async( seconds = ' +
+    value_time +
+    ', power_a = ' +
+    value_speed_a +
+    ', power_b = ' +
+    value_speed_b +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_both_motors_angle_async'] = function (block) {
-  var value_speed_a = BlocklyPy.valueToCode(block, 'SPEED_A', BlocklyPy.ORDER_ATOMIC);
-  var value_speed_b = BlocklyPy.valueToCode(block, 'SPEED_B', BlocklyPy.ORDER_ATOMIC);
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_angle_multi_async( angle = ' + value_angle + ', power_a = ' + value_speed_a + ', power_b = ' + value_speed_b + ')\n';
+  var value_speed_a = BlocklyPy.valueToCode(
+    block,
+    'SPEED_A',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_speed_b = BlocklyPy.valueToCode(
+    block,
+    'SPEED_B',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_angle_multi_async( angle = ' +
+    value_angle +
+    ', power_a = ' +
+    value_speed_a +
+    ', power_b = ' +
+    value_speed_b +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_A_time_async'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_async("A", seconds = ' + value_time + ', power = ' + value_speed + ', port = Port.A)\n';
+  var code =
+    '        await lane.motor_time_async("A", seconds = ' +
+    value_time +
+    ', power = ' +
+    value_speed +
+    ', port = Port.A)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_B_time_async'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_time_async("B", seconds = ' + value_time + ', power = ' + value_speed + ', port = Port.B)\n';
+  var code =
+    '        await lane.motor_time_async("B", seconds = ' +
+    value_time +
+    ', power = ' +
+    value_speed +
+    ', port = Port.B)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_A_angle_async'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_angle_async("A", angle = ' + value_angle + ', power = ' + value_speed + ', port = Port.A)\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_angle_async("A", angle = ' +
+    value_angle +
+    ', power = ' +
+    value_speed +
+    ', port = Port.A)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_B_angle_async'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_angle_async("B", angle = ' + value_angle + ', power = ' + value_speed + ', port = Port.B)\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_angle_async("B", angle = ' +
+    value_angle +
+    ', power = ' +
+    value_speed +
+    ', port = Port.B)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_head_left_async'] = function (block) {
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_angle_async("D", angle = 50, power = 10)\n';
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_angle_async("D", angle = 50, power = 10)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_head_right_async'] = function (block) {
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        await lane.motor_angle_async("D", angle = 50, power = -10)\n';
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        await lane.motor_angle_async("D", angle = 50, power = -10)\n';
   return code;
 };
 
@@ -895,7 +1029,8 @@ BlocklyPy['ipylgbst_get_roll_async'] = function (block) {
 };
 
 BlocklyPy['ipylgbst_shoot_arrow_async'] = function (block) {
-  var code = '        await lane.motor_angle_async("D", angle = 120, power = 120)\n        await lane.motor_angle("D", angle = 90, power = -80)\n';
+  var code =
+    '        await lane.motor_angle_async("D", angle = 120, power = 120)\n        await lane.motor_angle("D", angle = 90, power = -80)\n';
   return code;
 };
 
@@ -907,89 +1042,220 @@ BlocklyPy['ipylgbst_set_led'] = function (block) {
 
 BlocklyPy['ipylgbst_move_forward'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time_multi(seconds = ' + value_time + ', power_a = ' + value_speed + ', power_b =' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_time_multi(seconds = ' +
+    value_time +
+    ', power_a = ' +
+    value_speed +
+    ', power_b =' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_bacwards'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time_multi( seconds = ' + value_time + ', power_a = -' + value_speed + ', power_b = -' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_time_multi( seconds = ' +
+    value_time +
+    ', power_a = -' +
+    value_speed +
+    ', power_b = -' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_turn_left'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time_multi( seconds = ' + value_time + ', power_a = -' + value_speed + ', power_b = ' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_time_multi( seconds = ' +
+    value_time +
+    ', power_a = -' +
+    value_speed +
+    ', power_b = ' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_turn_right'] = function (block) {
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time_multi( seconds = ' + value_time + ', power_a = ' + value_speed + ', power_b = -' + value_speed + ')\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_time_multi( seconds = ' +
+    value_time +
+    ', power_a = ' +
+    value_speed +
+    ', power_b = -' +
+    value_speed +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_stop_motors'] = function (block) {
-  var code = '        lane.motor_time_multi( seconds = 0, power_a = 0, power_b = 0)\n';
+  var code =
+    '        lane.motor_time_multi( seconds = 0, power_a = 0, power_b = 0)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_both_motors_time'] = function (block) {
-  var value_speed_a = BlocklyPy.valueToCode(block, 'SPEED_A', BlocklyPy.ORDER_ATOMIC);
-  var value_speed_b = BlocklyPy.valueToCode(block, 'SPEED_B', BlocklyPy.ORDER_ATOMIC);
+  var value_speed_a = BlocklyPy.valueToCode(
+    block,
+    'SPEED_A',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_speed_b = BlocklyPy.valueToCode(
+    block,
+    'SPEED_B',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time_multi( seconds = ' + value_time + ', power_a = ' + value_speed_a + ', power_b = ' + value_speed_b + ')\n';
+  var code =
+    '        lane.motor_time_multi( seconds = ' +
+    value_time +
+    ', power_a = ' +
+    value_speed_a +
+    ', power_b = ' +
+    value_speed_b +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_both_motors_angle'] = function (block) {
-  var value_speed_a = BlocklyPy.valueToCode(block, 'SPEED_A', BlocklyPy.ORDER_ATOMIC);
-  var value_speed_b = BlocklyPy.valueToCode(block, 'SPEED_B', BlocklyPy.ORDER_ATOMIC);
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_angle_multi( angle = ' + value_angle + ', power_a = ' + value_speed_a + ', power_b = ' + value_speed_b + ')\n';
+  var value_speed_a = BlocklyPy.valueToCode(
+    block,
+    'SPEED_A',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_speed_b = BlocklyPy.valueToCode(
+    block,
+    'SPEED_B',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_angle_multi( angle = ' +
+    value_angle +
+    ', power_a = ' +
+    value_speed_a +
+    ', power_b = ' +
+    value_speed_b +
+    ')\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_A_time'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time("A", seconds = ' + value_time + ', power = ' + value_speed + ', port = Port.A)\n';
+  var code =
+    '        lane.motor_time("A", seconds = ' +
+    value_time +
+    ', power = ' +
+    value_speed +
+    ', port = Port.A)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_B_time'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var value_time = BlocklyPy.valueToCode(block, 'TIME', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_time("B", seconds = ' + value_time + ', power = ' + value_speed + ', port = Port.B)\n';
+  var code =
+    '        lane.motor_time("B", seconds = ' +
+    value_time +
+    ', power = ' +
+    value_speed +
+    ', port = Port.B)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_A_angle'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_angle("A", angle = ' + value_angle + ', power = ' + value_speed + ', port = Port.A)\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_angle("A", angle = ' +
+    value_angle +
+    ', power = ' +
+    value_speed +
+    ', port = Port.A)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_motor_B_angle'] = function (block) {
-  var value_speed = BlocklyPy.valueToCode(block, 'SPEED', BlocklyPy.ORDER_ATOMIC);
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
-  var code = '        lane.motor_angle("B", angle = ' + value_angle + ', power = ' + value_speed + ', port = Port.B)\n';
+  var value_speed = BlocklyPy.valueToCode(
+    block,
+    'SPEED',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
+  var code =
+    '        lane.motor_angle("B", angle = ' +
+    value_angle +
+    ', power = ' +
+    value_speed +
+    ', port = Port.B)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_head_left'] = function (block) {
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var code = '        lane.motor_angle("D", angle = 50, power = 10)\n';
   return code;
 };
 
 BlocklyPy['ipylgbst_move_head_right'] = function (block) {
-  var value_angle = BlocklyPy.valueToCode(block, 'ANGLE', BlocklyPy.ORDER_ATOMIC);
+  var value_angle = BlocklyPy.valueToCode(
+    block,
+    'ANGLE',
+    BlocklyPy.ORDER_ATOMIC
+  );
   var code = '        lane.motor_angle("D", angle = 50, power = -10)\n';
   return code;
 };
@@ -1015,7 +1281,8 @@ BlocklyPy['ipylgbst_get_roll'] = function (block) {
 };
 
 BlocklyPy['ipylgbst_shoot_arrow'] = function (block) {
-  var code = '        lane.motor_angle("D", angle = 120, power = 120)\n        await lane.motor_angle("D", angle = 90, power = -80)\n';
+  var code =
+    '        lane.motor_angle("D", angle = 120, power = 120)\n        await lane.motor_angle("D", angle = 90, power = -80)\n';
   return code;
 };
 
