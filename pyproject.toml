@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling>=1.4.0", "jupyterlab>=3.4.7,<4.0.0", "hatch-nodejs-version"]
+requires = ["hatchling>=1.4.0", "jupyterlab~=3.6", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
@@ -23,6 +23,9 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dependencies = [
+ "jupyterlab~=3.6",
+ "jupyterlab-blockly>=0.3.0-alpha.1,<0.4",
+ "ipywidgets==7.6.0"
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 
@@ -66,7 +69,7 @@ build_dir = "jupyterlab_blockly_ipylgbst/labextension"
 version_cmd = "hatch version"
 
 [tool.jupyter-releaser.hooks]
-before-build-npm = ["python -m pip install jupyterlab~=3.1", "jlpm", "jlpm build:prod"]
+before-build-npm = ["python -m pip install jupyterlab~=3.6", "jlpm", "jlpm build:prod"]
 before-build-python = ["jlpm clean:all"]
 
 [tool.check-wheel-contents]
