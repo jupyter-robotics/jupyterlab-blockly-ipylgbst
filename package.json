@@ -106,7 +106,8 @@
     "node_modules",
     "dist",
     "coverage",
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "examples"
   ],
   "eslintConfig": {
     "extends": [

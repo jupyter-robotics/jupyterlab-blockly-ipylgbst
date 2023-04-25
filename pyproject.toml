@@ -25,7 +25,8 @@ classifiers = [
 dependencies = [
  "jupyterlab~=3.6",
  "jupyterlab-blockly>=0.3.0-alpha.1,<0.4",
- "ipywidgets==7.6.0"
+ "ipywidgets==7.6.0",
+ "ipylgbst>=0.2.0, <0.3",
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 
