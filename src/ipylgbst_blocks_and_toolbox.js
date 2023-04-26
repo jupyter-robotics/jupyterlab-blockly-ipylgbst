@@ -1,7 +1,7 @@
 /*
 This extension uses the ipylgbst library, which is under the following license:
 
-Copyright (c) 2023 Thorsten Beier
+Copyright (c) 2023 QuantStack
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -29,8 +29,10 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
 import * as Blockly from 'blockly';
 import BlocklyPy from 'blockly/python';
+//import { pythonGenerator as BlocklyPy } from 'blockly/python';
 
 var ipylgbst_color_async = '#5D3FD3';
 var vernie_color_async = '#088F8F';
