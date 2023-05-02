@@ -211,7 +211,7 @@
     y-protocols "^1.0.5"
     yjs "^13.5.40"
 
-"@jupyterlab/application@^3.6":
+"@jupyterlab/application@^3.6.3":
   version "3.6.3"
   resolved "https://registry.yarnpkg.com/@jupyterlab/application/-/application-3.6.3.tgz#7e199f77a4536bc7429fbecf9ba1850f51d9de52"
   integrity sha512-G0tR6sUSCuHB8vGQnaB5lfihKNJVHtqYNoMlsZYF9rYpZEhW1TRD4uE5rg4RfDDR+GghjckQlP3rRNB2Vn4tMA==
@@ -3036,10 +3036,10 @@ jsonpointer@^5.0.0:
     array-includes "^3.1.5"
     object.assign "^4.1.3"
 
-jupyterlab-blockly@^0.3.0-alpha.1:
-  version "0.3.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/jupyterlab-blockly/-/jupyterlab-blockly-0.3.0-alpha.1.tgz#40eefce471f730310e412141eaf74318d47b14cf"
-  integrity sha512-eDEky9PhBzU3nujQbWwur0RMsrf3PDdkPPwAoIinNr8dutT1ajcbVu0ywDNoc7SsVYw34gLwwb4pjg8Qz63+tw==
+jupyterlab-blockly@^0.3.0-alpha.2:
+  version "0.3.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/jupyterlab-blockly/-/jupyterlab-blockly-0.3.0-alpha.2.tgz#d948a662abb61910b7a7bc2769b004d19aaa9155"
+  integrity sha512-IDPFYkmJzM58hzOrcgkm0nfehSvQipCiYMjYSJNliYVnrBl5HNpQbqFgHvekscB0j91aOUzDX41hXud+2sEsqg==
   dependencies:
     "@jupyterlab/apputils" "^3.6"
     "@jupyterlab/cells" "^3.6"

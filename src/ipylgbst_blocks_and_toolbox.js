@@ -31,8 +31,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 import * as Blockly from 'blockly';
-import BlocklyPy from 'blockly/python';
-//import { pythonGenerator as BlocklyPy } from 'blockly/python';
+import { pythonGenerator as BlocklyPy } from 'blockly/python';
 
 var ipylgbst_color_async = '#5D3FD3';
 var vernie_color_async = '#088F8F';
@@ -1654,10 +1653,10 @@ const TOOLBOX = {
           kind: 'BLOCK',
           type: 'ipylgbst_connect_lane'
         },
-        {
-          kind: 'BLOCK',
-          type: 'ipylgbst_coroutine_async'
-        },
+        // {
+        //   kind: 'BLOCK',
+        //   type: 'ipylgbst_coroutine_async'
+        // },
         {
           kind: 'BLOCK',
           type: 'ipylgbst_sleep'

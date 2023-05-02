@@ -1,0 +1,1 @@
+{"blocks":{"languageVersion":0,"blocks":[{"type":"ipylgbst_connect","id":"v9bIRMW.Ld.vcDfPih~G","x":104,"y":28,"inputs":{"DO":{"block":{"type":"ipylgbst_set_led_async","id":"|Jvg@X(pKdUrDY9[PoVi","fields":{"COLOR":"LedColor.red"}}}}}]}}
