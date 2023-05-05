@@ -3036,10 +3036,10 @@ jsonpointer@^5.0.0:
     array-includes "^3.1.5"
     object.assign "^4.1.3"
 
-jupyterlab-blockly@^0.3.0-alpha.2:
-  version "0.3.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/jupyterlab-blockly/-/jupyterlab-blockly-0.3.0-alpha.2.tgz#d948a662abb61910b7a7bc2769b004d19aaa9155"
-  integrity sha512-IDPFYkmJzM58hzOrcgkm0nfehSvQipCiYMjYSJNliYVnrBl5HNpQbqFgHvekscB0j91aOUzDX41hXud+2sEsqg==
+jupyterlab-blockly@^0.3.0-alpha.3:
+  version "0.3.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/jupyterlab-blockly/-/jupyterlab-blockly-0.3.0-alpha.3.tgz#b48a782f4dc610e0ed436c454f15692356198627"
+  integrity sha512-upBsf94028effSlM5BOjyZsDcGKN3sWZ+6eVqZrshdjp2xYwyPeIzuDx6J1HMU0AixYae38ZK0/wqnD/F+JDeA==
   dependencies:
     "@jupyterlab/apputils" "^3.6"
     "@jupyterlab/cells" "^3.6"
