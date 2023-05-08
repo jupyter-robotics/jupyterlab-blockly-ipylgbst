@@ -753,7 +753,7 @@ BlocklyPy['ipylgbst_connect'] = function (block) {
 
   // var code = 'with boost_connect(' + no_lanes +') as boost:\n' + branch;
   var code =
-    'with boost_connect(1) as boost:\n    async def main(lane):\n' +
+    'with boost_connect(1) as boost:\n    async def main(lane, log):\n' +
     branch +
     '\n    boost.run_async_program(main)\n';
   // 'boost = LegoBoostWidget()\nboost.connect()\n\nasync def main(lane):\n' + branch + '\nboost.run(main)\n';
