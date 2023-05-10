@@ -20,6 +20,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     );
 
     blockly.registerToolbox('ipylgbst', BlocklyIpylgbst.Toolbox);
+    blockly.registerToolbox('ipylgbst async', BlocklyIpylgbst.Toolbox_async);
   }
 };
 
