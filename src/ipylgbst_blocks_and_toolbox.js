@@ -62,9 +62,7 @@ Blockly.Blocks['ipylgbst_connect_lane'] = {
 
 Blockly.Blocks['ipylgbst_connect'] = {
   init: function () {
-    this.appendDummyInput().appendField(
-      'Connect to MoveHub and run task concurrently'
-    );
+    this.appendDummyInput().appendField('Connect to MoveHub and run task');
     this.setPreviousStatement(false, null);
     this.setNextStatement(false, null);
     this.appendStatementInput('DO');
@@ -1649,10 +1647,10 @@ const TOOLBOX = {
           kind: 'BLOCK',
           type: 'ipylgbst_connect'
         },
-        {
-          kind: 'BLOCK',
-          type: 'ipylgbst_connect_lane'
-        },
+        // {
+        //   kind: 'BLOCK',
+        //   type: 'ipylgbst_connect_lane'
+        // },
         {
           kind: 'BLOCK',
           type: 'ipylgbst_sleep'
@@ -2101,10 +2099,10 @@ const TOOLBOX_ASYNC = {
       colour: ipylgbst_color_async,
       name: 'ipylgbst async',
       contents: [
-        {
-          kind: 'BLOCK',
-          type: 'ipylgbst_connect'
-        },
+        // {
+        //   kind: 'BLOCK',
+        //   type: 'ipylgbst_connect'
+        // },
         {
           kind: 'BLOCK',
           type: 'ipylgbst_connect_lane'
