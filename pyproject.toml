@@ -23,9 +23,10 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dependencies = [
- "jupyterlab~=3.6",
- "jupyterlab-blockly>=0.3.0-alpha.1,<0.4",
- "ipywidgets==7.6.0"
+ "jupyterlab~=3.6.0",
+ "ipywidgets~=7.6.0",
+ "jupyterlab-blockly>=0.3.0a4, <0.4",
+ "ipylgbst>=0.2.1, <0.3",
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 
