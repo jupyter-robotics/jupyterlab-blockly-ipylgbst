@@ -57,9 +57,12 @@
   "dependencies": {
     "@jupyterlab/application": "^3.6.3",
     "blockly": "^9.2.1",
-    "jupyterlab-blockly": "^0.3.0-alpha.3",
+    "jupyterlab-blockly": "^0.3.0-alpha.4",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0"
+  },
+  "resolutions": {
+    "@jupyterlab/rendermime-interfaces": "3.6"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.6.0",
