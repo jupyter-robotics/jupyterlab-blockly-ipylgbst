@@ -44,7 +44,7 @@ fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
 artifacts = ["jupyterlab_blockly_ipylgbst/labextension"]
-exclude = ["/.github", "/binder", "node_modules"]
+exclude = [".github", "binder", "node_modules"]
 
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyterlab_blockly_ipylgbst/labextension" = "share/jupyter/labextensions/jupyterlab-blockly-ipylgbst"
