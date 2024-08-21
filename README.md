@@ -1,6 +1,6 @@
 # jupyterlab-blockly-ipylgbst
 
-[![Github Actions Status](https://github.com/QuantStack/jupyterlab-blockly-ipylgbst/workflows/Build/badge.svg)](https://github.com/QuantStack/jupyterlab-blockly-ipylgbst/actions/workflows/build.yml)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/QuantStack/jupyterlab-blockly-ipylgbst/main?urlpath=lab)
+[![Github Actions Status](https://github.com/QuantStack/jupyterlab-blockly-ipylgbst/workflows/Build/badge.svg)](https://github.com/QuantStack/jupyterlab-blockly-ipylgbst/actions/workflows/build.yml)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/QuantStack/jupyterlab-blockly-ipylgbst/main?urlpath=lab/tree/examples/demo.jpblockly)
 Blockly extension for JupyterLab to control the Lego Boost, using the ipylgbst library.
 
 ## Blockly
