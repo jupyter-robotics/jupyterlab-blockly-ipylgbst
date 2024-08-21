@@ -10,9 +10,9 @@
     "Lego Boost",
     "robot"
   ],
-  "homepage": "https://github.com/QuantStack/jupyterlab-blockly-ipylgbst",
+  "homepage": "https://github.com/jupyter-robotics/jupyterlab-blockly-ipylgbst",
   "bugs": {
-    "url": "https://github.com/QuantStack/jupyterlab-blockly-ipylgbst/issues"
+    "url": "https://github.com/jupyter-robotics/jupyterlab-blockly-ipylgbst/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
@@ -28,7 +28,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/QuantStack/jupyterlab-blockly-ipylgbst.git"
+    "url": "https://github.com/jupyter-robotics/jupyterlab-blockly-ipylgbst.git"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
