@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-blockly-ipylgbst",
-  "version": "0.1.0",
+  "version": "0.1.0-a0",
   "description": "Blockly extension for JupyterLab to control the Lego Boost, using the ipylgbst library.",
   "keywords": [
     "jupyter",
